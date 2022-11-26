@@ -20,6 +20,8 @@ Prismic Documentation Step By Step: https://www.hamedbahram.io/notes/prismic
 
 > npm install @prismicio/next
 
+<br/>
+<br/>
 # Problem with import
 
 ### Parsing error: Cannot find module 'next/babel'
@@ -42,3 +44,5 @@ Add in .eslintrc.json, replace the existing code with:
 > }
 
 ps: And it will work!
+<br/>
+<br/>
