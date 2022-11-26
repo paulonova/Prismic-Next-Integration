@@ -1,5 +1,6 @@
-import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
+import React from "react";
+import { PrismicRichText } from "@prismicio/react";
+import styles from "./heroslice.module.scss";
 
 /**
  * @typedef {import("@prismicio/client").Content.HeroSliceSlice} HeroSliceSlice
@@ -7,30 +8,19 @@ import { PrismicRichText } from '@prismicio/react'
  * @param { HeroSliceProps }
  */
 const HeroSlice = ({ slice }) => (
-  <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <PrismicRichText field={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <PrismicRichText field={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
-  </section>
-)
+  <section className={styles.section}>
+    {/*<pre>{JSON.stringify(slice, null, 2)}</pre>*/}
+    <div className={styles.container}>
+      <div className={styles["text-content"]}>
+        <PrismicRichText field={slice.primary.title} />
+        <PrismicRichText field={slice.primary.description} />
+      </div>
 
-export default HeroSlice
+      <img src={slice.primary.image.url} alt={slice.primary.image.alt} />
+    </div>
+  </section>
+);
+
+export default HeroSlice;
+
+// <pre>{JSON.stringify(slice, null, 2)}</pre> Shows the json file from slice

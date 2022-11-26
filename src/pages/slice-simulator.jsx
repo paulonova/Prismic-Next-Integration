@@ -7,8 +7,8 @@ import state from "../.slicemachine/libraries-state.json";
 const SliceSimulatorPage = () => {
   return (
     <SliceSimulator
-      sliceZone={(props) => (
-        <SliceZone slices={...props} components={components} />
+      sliceZone={({ slices }) => (
+        <SliceZone slices={slices} components={components} />
       )}
       state={state}
     />
@@ -25,4 +25,3 @@ export const getStaticProps = async () => {
     return { props: {} };
   }
 };
-

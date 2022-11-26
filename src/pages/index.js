@@ -1,11 +1,23 @@
-import HeroSlice from "../../slices/HeroSlice";
-import styles from "../styles/Home.module.scss";
+import { SliceZone } from "@prismicio/react";
+import { createClient } from "../../prismicio";
+import { components } from "../../slices";
 
-export default function Home() {
+const Page = ({ page, navigation, settings }) => {
   return (
-    <div className={styles.container}>
-      <h1>Homepage</h1>
-      <HeroSlice />
+    <div>
+      <SliceZone slices={page.data.slices} components={components} />
     </div>
   );
+};
+
+export default Page;
+
+export async function getStaticProps({ previewData }) {
+  const client = createClient({ previewData });
+  const page = await client.getSingle("homepage");
+  return {
+    props: {
+      page,
+    },
+  };
 }
