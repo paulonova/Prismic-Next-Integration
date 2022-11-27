@@ -1,12 +1,8 @@
 import React from "react";
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicLink, PrismicRichText } from "@prismicio/react";
 import styles from "./heroslice.module.scss";
+import { PrismicNextImage } from "@prismicio/next";
 
-/**
- * @typedef {import("@prismicio/client").Content.HeroSliceSlice} HeroSliceSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<HeroSliceSlice>} HeroSliceProps
- * @param { HeroSliceProps }
- */
 const HeroSlice = ({ slice }) => (
   <section className={styles.section}>
     {/*<pre>{JSON.stringify(slice, null, 2)}</pre>*/}
@@ -15,8 +11,12 @@ const HeroSlice = ({ slice }) => (
         <PrismicRichText field={slice.primary.title} />
         <PrismicRichText field={slice.primary.description} />
       </div>
-
-      <img src={slice.primary.image.url} alt={slice.primary.image.alt} />
+      <PrismicNextImage field={slice.primary.image} />
+      {slice.items.map((item, index) => (
+        <PrismicLink key={index} field={item.cta_link}>
+          {item.cta_text}
+        </PrismicLink>
+      ))}
     </div>
   </section>
 );
