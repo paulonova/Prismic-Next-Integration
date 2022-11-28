@@ -11,19 +11,30 @@
     margin-bottom: 10px;
     text-align: center;
     color: white;
+    text-shadow: 2px 3px 3px rgb(67 67 67);
   }
 
   p{
+    font-size: 2rem;
     margin-top: 0;
     text-align: center;
     color: white;
+    text-shadow: 2px 3px 3px rgb(67 67 67);
   }
 
+  
   .text-content{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    a{
+      padding: 10px 15px;
+      color: white;
+      background-color: orangered;
+    }
+  
   }
   
 

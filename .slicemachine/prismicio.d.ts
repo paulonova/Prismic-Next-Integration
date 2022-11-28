@@ -75,7 +75,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = HeroSliceSlice | ImageGridSlice;
+type PageDocumentDataSlicesSlice = HeroSliceSlice;
 /**
  * Page document from Prismic
  *

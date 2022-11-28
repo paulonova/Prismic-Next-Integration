@@ -25,3 +25,14 @@ export const getStaticProps = async () => {
     return { props: {} };
   }
 };
+
+// import state from "../.slicemachine/libraries-state.json";
+// import { components } from "../slices";
+
+// const SliceSimulatorPage = () => (<SliceSimulator
+//   // The "sliceZone" prop should be a function receiving slices and rendering them using your "SliceZone" component.
+//   sliceZone={(props) => <SliceZone {...props} components={components} />}
+//   state={state}
+// />);
+
+// export default SliceSimulatorPage;

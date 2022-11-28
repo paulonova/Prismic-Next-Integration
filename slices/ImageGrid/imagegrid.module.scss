@@ -1,0 +1,22 @@
+.container{
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  img{
+    width: 30%;
+    max-width: 400px;
+    height: auto;
+  }
+  pre{
+    font-size: 1.6rem;
+  }
+
+
+}
+
