@@ -47,3 +47,7 @@ Add in .eslintrc.json, replace the existing code with:
 ps: And it will work!
 <br/>
 <br/>
+
+# Tailwind Css installation in Next.js
+
+> Link: https://tailwindcss.com/docs/guides/nextjs
